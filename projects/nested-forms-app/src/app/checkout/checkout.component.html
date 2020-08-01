@@ -1,0 +1,52 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Checkout</h1>
+  <form [formGroup]="form">
+    <mat-grid-list cols="2" rowHeight="500">
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              Personal information
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div class="row">
+              <div class="col-6">
+                <mat-form-field appearance="fill">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" />
+                </mat-form-field>
+              </div>
+              <div class="col-6">
+                <mat-form-field appearance="fill">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput formControlName="lastName" />
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field appearance="fill">
+                  <mat-label>Email Address</mat-label>
+                  <input matInput type="email" formControlName="email" />
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <mat-form-field appearance="fill">
+                  <mat-label>Phone</mat-label>
+                  <input matInput formControlName="phone" />
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <app-address controlName="shippingAddress" title="Shipping Address">
+        </app-address>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <app-address controlName="billingAddress" title="Billing Address">
+        </app-address>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>
